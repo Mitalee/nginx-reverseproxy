@@ -5,4 +5,5 @@ services:
     volumes:
       - .:/usr/share/nginx/html
     ports:
-      - "5432:80"
+      # - "5432:80"
+      - "80:80"
