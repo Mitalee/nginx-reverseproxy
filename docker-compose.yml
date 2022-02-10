@@ -1,9 +1,14 @@
 version: '2'
 services:
-  app:
+  nginx:
     image: nginx
+    # container: reverse_proxy
+    # volumes:
+      # - .:/usr/share/nginx/html
     volumes:
-      - .:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./test:/test
     ports:
       # - "5432:80"
       - "80:80"
+    
